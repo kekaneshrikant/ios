@@ -8,6 +8,7 @@
 
 #import "ReceipeTableViewController.h"
 #import "ReceipeDetailViewController.h"
+#import "ReceipeTableViewCell.h"
 
 @interface ReceipeTableViewController ()
 
@@ -56,10 +57,10 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"receipeId" forIndexPath:indexPath];
+    ReceipeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"receipeId" forIndexPath:indexPath];
     
-    cell.textLabel.text = self.receipeArray[indexPath.row][@"name"];
-    cell.imageView.image = [UIImage imageNamed:self.receipeArray[indexPath.row][@"imageName"]];
+    cell.receipeNameLabel.text = self.receipeArray[indexPath.row][@"name"];
+    cell.receipeImageView.image = [UIImage imageNamed:self.receipeArray[indexPath.row][@"imageName"]];
     
     return cell;
 }

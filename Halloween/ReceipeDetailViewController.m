@@ -10,6 +10,11 @@
 
 @interface ReceipeDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ingredientsLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *procedureLabel;
 @end
 
 @implementation ReceipeDetailViewController
@@ -18,7 +23,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    
+    self.imageView.image = [UIImage imageNamed:self.receipeDictionary[@"imageName"]];
+    self.nameLabel.text = self.receipeDictionary[@"name"];
+    self.ingredientsLabel.text = self.receipeDictionary[@"ingredients"];
+    self.procedureLabel.text = self.receipeDictionary[@"procedure"];
+   
     NSLog(@"The dictionary is %@",self.receipeDictionary);
+}
+
+
+-(void) viewDidLayoutSubviews{
+    [self.ingredientsLabel setPreferredMaxLayoutWidth:0.9 * self.view.frame.size.width];
+    self.ingredientsLabel.numberOfLines = 0;
+    
+    [self.procedureLabel setPreferredMaxLayoutWidth:0.9 * self.view.frame.size.width];
+    self.procedureLabel.numberOfLines = 0;
 }
 
 - (void)didReceiveMemoryWarning {

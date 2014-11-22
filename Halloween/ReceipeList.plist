@@ -4,13 +4,13 @@
 <array>
 	<dict>
 		<key>name</key>
-		<string>ButtonChicken</string>
+		<string>ButterChicken</string>
 		<key>imageName</key>
 		<string>butterChicken.png</string>
 		<key>ingredients</key>
-		<string>These are the button Chicken ingredients.</string>
+		<string>Butter chicken is typically served with chicken on the bone in India and served off the bone in the United States, United Kingdom and other regions outside of India. Traditional preparations are typically more spicy and less sweet than preparations served abroad. Chicken is marinated overnight in a yogurt and spice mixture which usually includes garam masala, ginger, garlic paste, lemon or lime, pepper, coriander, cumin, turmeric and chili.</string>
 		<key>procedure</key>
-		<string>This is the procedure for Button Chicken.</string>
+		<string>Butter chicken is typically served with chicken on the bone in India and served off the bone in the United States, United Kingdom and other regions outside of India. Traditional preparations are typically more spicy and less sweet than preparations served abroad. Chicken is marinated overnight in a yogurt and spice mixture which usually includes garam masala, ginger, garlic paste, lemon or lime, pepper, coriander, cumin, turmeric and chili.</string>
 	</dict>
 	<dict>
 		<key>name</key>

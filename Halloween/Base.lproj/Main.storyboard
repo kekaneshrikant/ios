@@ -198,17 +198,56 @@
         <scene sceneID="PeE-Rd-s5n">
             <objects>
                 <tableViewController id="NHP-dA-bbs" customClass="ReceipeTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vMF-8h-JpK">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="127" sectionHeaderHeight="22" sectionFooterHeight="22" id="vMF-8h-JpK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="receipeId" id="wJ2-YD-Mw9">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="receipeId" rowHeight="127" id="wJ2-YD-Mw9" customClass="ReceipeTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wJ2-YD-Mw9" id="YM1-cd-0y9">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ou1-zy-fmz">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="126"/>
+                                        </imageView>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Uz-Kh-jEa">
+                                            <rect key="frame" x="0.0" y="83" width="600" height="44"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="K5E-Yd-bZe">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZx-8R-x8L">
+                                                        <rect key="frame" x="279" y="11" width="42" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="centerX" secondItem="mZx-8R-x8L" secondAttribute="centerX" id="Cjx-a4-fLE"/>
+                                                    <constraint firstAttribute="centerY" secondItem="mZx-8R-x8L" secondAttribute="centerY" constant="0.5" id="YbG-zb-Jgl"/>
+                                                </constraints>
+                                            </view>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="LVn-Al-OFa"/>
+                                            </constraints>
+                                            <blurEffect style="light"/>
+                                        </visualEffectView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ou1-zy-fmz" secondAttribute="trailing" constant="-8" id="2YK-O9-3Ue"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="5Uz-Kh-jEa" secondAttribute="trailing" constant="-8" id="53f-eI-RRe"/>
+                                        <constraint firstItem="Ou1-zy-fmz" firstAttribute="top" secondItem="YM1-cd-0y9" secondAttribute="topMargin" constant="-8" id="ETX-Et-w6a"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5Uz-Kh-jEa" secondAttribute="bottom" constant="-9" id="G0e-AS-Lx1"/>
+                                        <constraint firstItem="5Uz-Kh-jEa" firstAttribute="leading" secondItem="YM1-cd-0y9" secondAttribute="leadingMargin" constant="-8" id="Hhl-xv-kZO"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Ou1-zy-fmz" secondAttribute="bottom" constant="-8" id="fgP-Ph-9N1"/>
+                                        <constraint firstItem="Ou1-zy-fmz" firstAttribute="leading" secondItem="YM1-cd-0y9" secondAttribute="leadingMargin" constant="-8" id="oTG-AB-J30"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="receipeImageView" destination="Ou1-zy-fmz" id="ceP-QV-Gij"/>
+                                    <outlet property="receipeNameLabel" destination="mZx-8R-x8L" id="FGZ-QH-IxL"/>
                                     <segue destination="odq-F7-sDs" kind="show" id="pGl-Ly-c7N"/>
                                 </connections>
                             </tableViewCell>
@@ -222,7 +261,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fWU-IU-Sbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292" y="2064"/>
+            <point key="canvasLocation" x="1292" y="2060"/>
         </scene>
         <!--Chocolate Detail View Controller-->
         <scene sceneID="WNM-ma-Kjx">

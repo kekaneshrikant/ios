@@ -12,6 +12,7 @@
 		BF596DCD1A20A54B0080BDB1 /* bhindiAaloo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF596DCC1A20A54B0080BDB1 /* bhindiAaloo.png */; };
 		BF596DCF1A20A5A60080BDB1 /* butterChicken.png in Resources */ = {isa = PBXBuildFile; fileRef = BF596DCE1A20A5A60080BDB1 /* butterChicken.png */; };
 		BF596DD21A20AA560080BDB1 /* ReceipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF596DD11A20AA560080BDB1 /* ReceipeDetailViewController.m */; };
+		BF596DD51A20C4430080BDB1 /* ReceipeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF596DD41A20C4430080BDB1 /* ReceipeTableViewCell.m */; };
 		BF5BBCFD1A18BA19002E1915 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5BBCFC1A18BA19002E1915 /* FirstTableViewController.m */; };
 		BF5BBD001A18D0DF002E1915 /* ChocolateDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5BBCFF1A18D0DF002E1915 /* ChocolateDetailViewController.m */; };
 		BF5BBD031A18DB2C002E1915 /* TermConditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5BBD021A18DB2C002E1915 /* TermConditionViewController.m */; };
@@ -43,6 +44,8 @@
 		BF596DCE1A20A5A60080BDB1 /* butterChicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = butterChicken.png; sourceTree = "<group>"; };
 		BF596DD01A20AA560080BDB1 /* ReceipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceipeDetailViewController.h; sourceTree = "<group>"; };
 		BF596DD11A20AA560080BDB1 /* ReceipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceipeDetailViewController.m; sourceTree = "<group>"; };
+		BF596DD31A20C4430080BDB1 /* ReceipeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceipeTableViewCell.h; sourceTree = "<group>"; };
+		BF596DD41A20C4430080BDB1 /* ReceipeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceipeTableViewCell.m; sourceTree = "<group>"; };
 		BF5BBCFB1A18BA19002E1915 /* FirstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
 		BF5BBCFC1A18BA19002E1915 /* FirstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
 		BF5BBCFE1A18D0DF002E1915 /* ChocolateDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChocolateDetailViewController.h; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				BF596DCA1A209A6B0080BDB1 /* ReceipeList.plist */,
 				BF596DD01A20AA560080BDB1 /* ReceipeDetailViewController.h */,
 				BF596DD11A20AA560080BDB1 /* ReceipeDetailViewController.m */,
+				BF596DD31A20C4430080BDB1 /* ReceipeTableViewCell.h */,
+				BF596DD41A20C4430080BDB1 /* ReceipeTableViewCell.m */,
 			);
 			path = Halloween;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 				BF6294C61A04A0E200DB06CD /* AppDelegate.m in Sources */,
 				BF6294C31A04A0E200DB06CD /* main.m in Sources */,
 				BF596DD21A20AA560080BDB1 /* ReceipeDetailViewController.m in Sources */,
+				BF596DD51A20C4430080BDB1 /* ReceipeTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

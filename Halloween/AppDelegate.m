@@ -17,7 +17,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
-    tabBar.selectedIndex = 2;
+    tabBar.selectedIndex = 4;
+    
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
+        NSLog(@"First Launch of the application");
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+        
+        NSString *pListPath = [[NSBundle mainBundle] pathForResource:@"ReceipeList" ofType:@"plist"];
+        
+        NSArray *pListArray =  [[NSArray alloc] initWithContentsOfFile:pListPath];
+        
+        NSArray *sandBoxPathArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        
+        NSString *documentPath = [sandBoxPathArray firstObject];
+        NSLog(@"Document path --> %@",documentPath);
+        
+        NSString *pListDocumentPath = [documentPath stringByAppendingPathComponent:@"ReceipeList.plist"];
+        NSLog(@"Sandbox pList path --> %@",pListDocumentPath);
+        
+        [pListArray writeToFile:pListDocumentPath atomically:YES];
+        
+    } else{
+        NSLog(@"Subsequent Launch");
+    }
+    
     return YES;
     
 }

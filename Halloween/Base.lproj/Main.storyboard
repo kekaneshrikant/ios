@@ -263,6 +263,50 @@
             </objects>
             <point key="canvasLocation" x="1292" y="2060"/>
         </scene>
+        <!--News Feed-->
+        <scene sceneID="eHf-47-MlP">
+            <objects>
+                <tableViewController id="35W-zD-9K2" customClass="NewsFeedTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="EMy-Mb-kOH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsIdentifier" id="FPT-0N-Wnx">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FPT-0N-Wnx" id="UaM-i9-nV5">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="35W-zD-9K2" id="RKi-Cc-tCA"/>
+                            <outlet property="delegate" destination="35W-zD-9K2" id="1sn-qe-EzR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="News Feed" id="vXj-a8-zuE"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSs-gs-SYQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-887" y="1669"/>
+        </scene>
+        <!--News Feed-->
+        <scene sceneID="eSR-LK-8qz">
+            <objects>
+                <navigationController id="15g-be-rPO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News Feed" id="5MR-Ru-8sU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G5O-Aq-flb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="35W-zD-9K2" kind="relationship" relationship="rootViewController" id="b40-l8-JhE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eqd-AI-PU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-831" y="517"/>
+        </scene>
         <!--Chocolate Detail View Controller-->
         <scene sceneID="WNM-ma-Kjx">
             <objects>
@@ -439,6 +483,7 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="z5A-dI-x6y"/>
                         <segue destination="B95-MP-TZu" kind="relationship" relationship="viewControllers" id="HTk-Vf-LVW"/>
                         <segue destination="ba9-Ay-5iY" kind="relationship" relationship="viewControllers" id="fel-9A-YEj"/>
+                        <segue destination="15g-be-rPO" kind="relationship" relationship="viewControllers" id="ylb-17-iz7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XtV-m3-OjM" userLabel="First Responder" sceneMemberID="firstResponder"/>

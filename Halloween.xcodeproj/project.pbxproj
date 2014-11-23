@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF55493B1A21FB0800B78159 /* makhani.png in Resources */ = {isa = PBXBuildFile; fileRef = BF55493A1A21FB0800B78159 /* makhani.png */; };
+		BF55493E1A21FF1200B78159 /* CommunicationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BF55493D1A21FF1200B78159 /* CommunicationHandler.m */; };
+		BF5549411A2206C600B78159 /* NewsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5549401A2206C600B78159 /* NewsFeedTableViewController.m */; };
 		BF596DC91A2097B80080BDB1 /* ReceipeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF596DC81A2097B80080BDB1 /* ReceipeTableViewController.m */; };
 		BF596DCB1A209A6B0080BDB1 /* ReceipeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF596DCA1A209A6B0080BDB1 /* ReceipeList.plist */; };
 		BF596DCD1A20A54B0080BDB1 /* bhindiAaloo.png in Resources */ = {isa = PBXBuildFile; fileRef = BF596DCC1A20A54B0080BDB1 /* bhindiAaloo.png */; };
@@ -37,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF55493A1A21FB0800B78159 /* makhani.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = makhani.png; sourceTree = "<group>"; };
+		BF55493C1A21FF1200B78159 /* CommunicationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunicationHandler.h; sourceTree = "<group>"; };
+		BF55493D1A21FF1200B78159 /* CommunicationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunicationHandler.m; sourceTree = "<group>"; };
+		BF55493F1A2206C600B78159 /* NewsFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFeedTableViewController.h; sourceTree = "<group>"; };
+		BF5549401A2206C600B78159 /* NewsFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsFeedTableViewController.m; sourceTree = "<group>"; };
 		BF596DC71A2097B80080BDB1 /* ReceipeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceipeTableViewController.h; sourceTree = "<group>"; };
 		BF596DC81A2097B80080BDB1 /* ReceipeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceipeTableViewController.m; sourceTree = "<group>"; };
 		BF596DCA1A209A6B0080BDB1 /* ReceipeList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReceipeList.plist; sourceTree = "<group>"; };
@@ -108,6 +116,7 @@
 		BF6294BF1A04A0E100DB06CD /* Halloween */ = {
 			isa = PBXGroup;
 			children = (
+				BF55493A1A21FB0800B78159 /* makhani.png */,
 				BF596DCE1A20A5A60080BDB1 /* butterChicken.png */,
 				BF596DCC1A20A54B0080BDB1 /* bhindiAaloo.png */,
 				BF6294C41A04A0E200DB06CD /* AppDelegate.h */,
@@ -133,6 +142,10 @@
 				BF596DD11A20AA560080BDB1 /* ReceipeDetailViewController.m */,
 				BF596DD31A20C4430080BDB1 /* ReceipeTableViewCell.h */,
 				BF596DD41A20C4430080BDB1 /* ReceipeTableViewCell.m */,
+				BF55493C1A21FF1200B78159 /* CommunicationHandler.h */,
+				BF55493D1A21FF1200B78159 /* CommunicationHandler.m */,
+				BF55493F1A2206C600B78159 /* NewsFeedTableViewController.h */,
+				BF5549401A2206C600B78159 /* NewsFeedTableViewController.m */,
 			);
 			path = Halloween;
 			sourceTree = "<group>";
@@ -248,6 +261,7 @@
 				BF6294CC1A04A0E200DB06CD /* Main.storyboard in Resources */,
 				BF596DCF1A20A5A60080BDB1 /* butterChicken.png in Resources */,
 				BF6294D11A04A0E200DB06CD /* LaunchScreen.xib in Resources */,
+				BF55493B1A21FB0800B78159 /* makhani.png in Resources */,
 				BF6294CE1A04A0E200DB06CD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,9 +284,11 @@
 				BF6294C91A04A0E200DB06CD /* ViewController.m in Sources */,
 				BF6294E81A04C0C300DB06CD /* BrowserViewController.m in Sources */,
 				BF596DC91A2097B80080BDB1 /* ReceipeTableViewController.m in Sources */,
+				BF5549411A2206C600B78159 /* NewsFeedTableViewController.m in Sources */,
 				BF5BBD031A18DB2C002E1915 /* TermConditionViewController.m in Sources */,
 				BF5BBCFD1A18BA19002E1915 /* FirstTableViewController.m in Sources */,
 				BF6294C61A04A0E200DB06CD /* AppDelegate.m in Sources */,
+				BF55493E1A21FF1200B78159 /* CommunicationHandler.m in Sources */,
 				BF6294C31A04A0E200DB06CD /* main.m in Sources */,
 				BF596DD21A20AA560080BDB1 /* ReceipeDetailViewController.m in Sources */,
 				BF596DD51A20C4430080BDB1 /* ReceipeTableViewCell.m in Sources */,

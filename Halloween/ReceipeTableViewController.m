@@ -12,7 +12,7 @@
 
 @interface ReceipeTableViewController ()
 
-@property(nonatomic,strong) NSArray *receipeArray;
+@property(nonatomic,strong) NSMutableArray *receipeArray;
 
 @end
 
@@ -28,11 +28,32 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     
-    NSString *pListPath = [[NSBundle mainBundle] pathForResource:@"ReceipeList" ofType:@"plist"];
+   // NSString *pListPath = [[NSBundle mainBundle] pathForResource:@"ReceipeList" ofType:@"plist"];
     
-    self.receipeArray = [[NSArray alloc] initWithContentsOfFile:pListPath];
+   // self.receipeArray = [[NSArray alloc] initWithContentsOfFile:pListPath];
     
-    NSLog(@"%@",self.receipeArray);
+  //  NSLog(@"%@",self.receipeArray);
+    
+    NSArray *sandBoxPathArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *documentPath = [sandBoxPathArray firstObject];
+    
+    NSString *pListDocumentPath = [documentPath stringByAppendingPathComponent:@"ReceipeList.plist"];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:pListDocumentPath]) {
+        self.receipeArray = [[NSMutableArray alloc] initWithContentsOfFile:pListDocumentPath];
+        NSLog(@"From the Sandbox PList");
+    } else{
+        NSString *pListPath = [[NSBundle mainBundle] pathForResource:@"ReceipeList" ofType:@"plist"];
+        self.receipeArray = [[NSMutableArray alloc] initWithContentsOfFile:pListPath];
+        NSLog(@"From the Nav Bundle PList");
+    }
+    
+    [self.receipeArray addObject:@{@"name":@"Murgh Makhani",@"imageName":@"makhani.png",@"ingredients":@"This is the receipe for Murgh Makhani",@"procedure":@"This is the procedure for Murgh Makhani"}];
+    
+  //  [self.receipeArray writeToFile:pListDocumentPath atomically:YES];
+    
+    
     
 }
 

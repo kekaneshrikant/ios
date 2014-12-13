@@ -9,7 +9,7 @@
 #import "NewsFeedTableViewController.h"
 #import "CommunicationHandler.h"
 
-@interface NewsFeedTableViewController ()
+@interface NewsFeedTableViewController () <CommunicationHandlerDelegate>
 
 @property(nonatomic,strong) NSArray *articlesArray;
 
@@ -29,7 +29,23 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataReceived:) name:@"dataReceived" object:nil];
     
-    [CommunicationHandler makeNetworkRequestForURLString:@"http://api.feedzilla.com/v1/categories/26/articles.json"];
+   // [CommunicationHandler makeNetworkRequestForURLString:@"http://api.feedzilla.com/v1/categories/26/articles.json"];
+   
+    CommunicationHandler *ch = [[CommunicationHandler alloc] init];
+    
+    ch.delegate = self;
+    [ch makeNetworkRequestForURLString:@"http://api.feedzilla.com/v1/categories/26/articles.json"];
+}
+
+//
+-(void) recievedData:(NSDictionary *) dictionary{
+    
+    self.articlesArray = dictionary[@"articles"];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    });
 }
 
 

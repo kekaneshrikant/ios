@@ -8,8 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+
+@protocol CommunicationHandlerDelegate <NSObject>
+
+-(void) recievedData:(NSDictionary *) dictionary;
+
+@end
+
+
 @interface CommunicationHandler : NSObject
 
+@property (nonatomic,weak) id<CommunicationHandlerDelegate> delegate;
+
 +(void) makeNetworkRequestForURLString:(NSString *)urlString;
+
+-(void) makeNetworkRequestForURLString:(NSString *)urlString;
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface ReceipeDetailViewController : UIViewController
 
 @property (strong,nonatomic) NSDictionary *receipeDictionary;

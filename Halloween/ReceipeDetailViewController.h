@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface ReceipeDetailViewController : UIViewController
+
+
+@interface ReceipeDetailViewController : UIViewController <UIActionSheetDelegate>
 
 @property (strong,nonatomic) NSDictionary *receipeDictionary;
+
+- (IBAction)shareButtonClicked:(UIButton *)sender;
 
 @end

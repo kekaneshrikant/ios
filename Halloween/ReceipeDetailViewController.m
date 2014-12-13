@@ -7,6 +7,8 @@
 //
 
 #import "ReceipeDetailViewController.h"
+#import <Social/Social.h>
+#import <MessageUI/MessageUI.h>
 
 @interface ReceipeDetailViewController ()
 
@@ -57,4 +59,58 @@
 }
 */
 
+- (IBAction)shareButtonClicked:(UIButton *)sender {
+    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Share on Social Media" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Facebook",@"Twitter",@"Email",@"SMS", nil];
+    
+    [actionSheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet
+clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    NSString *buttonTitle =  [actionSheet buttonTitleAtIndex:buttonIndex];
+    if ([buttonTitle isEqualToString:@"Facebook"]) {
+    
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+           SLComposeViewController * cVC= [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            [cVC setInitialText:self.ingredientsLabel.text];
+            [cVC addImage:self.imageView.image];
+            [self presentViewController:cVC animated:YES completion:nil];
+            
+        } else{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No Facebook Account Setup" message:@"Need to setup a facebook Account" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [alertView show];
+        }
+        
+        
+    } else if ([buttonTitle isEqualToString:@"Twitter"]){
+        
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+            SLComposeViewController * cVC= [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+            [cVC setInitialText:self.ingredientsLabel.text];
+            [cVC addImage:self.imageView.image];
+            [self presentViewController:cVC animated:YES completion:nil];
+            
+        } else{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No Twitter Account Setup" message:@"Need to setup a Twitter Account" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [alertView show];
+        }
+    } else if([buttonTitle isEqualToString:@"Email"]){
+        
+        if ([MFMailComposeViewController canSendMail]) {
+            MFMailComposeViewController *mCVC = [[MFMailComposeViewController alloc] init];
+            [mCVC setToRecipients:@[@"kekaneshrikant@gmail.com"]];
+            [mCVC setMessageBody:self.procedureLabel.text isHTML:YES];
+            [mCVC setSubject:self.nameLabel.text];
+            [self presentViewController:mCVC animated:YES completion:nil];
+        } else {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No Twitter Account Setup" message:@"Need to setup a Twitter Account" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [alertView show];        }
+        
+        
+    } else if([buttonTitle isEqualToString:@"SMS"]){
+        
+    }
+}
 @end

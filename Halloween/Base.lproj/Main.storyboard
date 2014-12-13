@@ -153,10 +153,20 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umX-e8-p9C">
+                                        <rect key="frame" x="8" y="476" width="40" height="30"/>
+                                        <state key="normal" title="Share">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareButtonClicked:" destination="odq-F7-sDs" eventType="touchUpInside" id="55N-sb-dlr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="wKH-rj-zlN" secondAttribute="trailing" constant="8" id="7KG-DS-Zl1"/>
                                     <constraint firstAttribute="centerX" secondItem="wKH-rj-zlN" secondAttribute="centerX" id="9vS-BH-dMG"/>
+                                    <constraint firstItem="umX-e8-p9C" firstAttribute="leading" secondItem="Q6b-Nm-0IC" secondAttribute="leading" constant="8" id="AXQ-Pa-zOw"/>
                                     <constraint firstItem="PeR-LY-udq" firstAttribute="centerX" secondItem="wKH-rj-zlN" secondAttribute="centerX" id="BAM-Z6-UZu"/>
                                     <constraint firstItem="nIO-6q-GI6" firstAttribute="leading" secondItem="Gd6-ll-00b" secondAttribute="leading" id="FaG-xl-8Ty"/>
                                     <constraint firstItem="CWG-Dy-xfh" firstAttribute="leading" secondItem="KPZ-FN-yTU" secondAttribute="leading" id="IVN-CM-5Av"/>
@@ -167,6 +177,7 @@
                                     <constraint firstItem="Gd6-ll-00b" firstAttribute="top" secondItem="KPZ-FN-yTU" secondAttribute="bottom" constant="86" id="eg3-Hx-XYx"/>
                                     <constraint firstItem="nIO-6q-GI6" firstAttribute="top" secondItem="Gd6-ll-00b" secondAttribute="bottom" constant="8" id="iJ7-Xg-ViI"/>
                                     <constraint firstItem="wKH-rj-zlN" firstAttribute="leading" secondItem="Q6b-Nm-0IC" secondAttribute="leading" constant="8" id="lbH-sk-e9p"/>
+                                    <constraint firstItem="umX-e8-p9C" firstAttribute="top" secondItem="nIO-6q-GI6" secondAttribute="bottom" constant="61" id="muO-xs-DNo"/>
                                     <constraint firstItem="CWG-Dy-xfh" firstAttribute="top" secondItem="PeR-LY-udq" secondAttribute="bottom" constant="40" id="mwi-gL-d1q"/>
                                     <constraint firstAttribute="bottom" secondItem="nIO-6q-GI6" secondAttribute="bottom" constant="185" id="nyV-fs-UeO"/>
                                     <constraint firstItem="Gd6-ll-00b" firstAttribute="leading" secondItem="KPZ-FN-yTU" secondAttribute="leading" id="qAA-Qh-jrO"/>

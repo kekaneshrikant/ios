@@ -27,6 +27,9 @@
 		BF6294D11A04A0E200DB06CD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF6294CF1A04A0E200DB06CD /* LaunchScreen.xib */; };
 		BF6294DD1A04A0E200DB06CD /* HalloweenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6294DC1A04A0E200DB06CD /* HalloweenTests.m */; };
 		BF6294E81A04C0C300DB06CD /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6294E71A04C0C300DB06CD /* BrowserViewController.m */; };
+		BF73CA701A459A4E0033E306 /* MapKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF73CA6F1A459A4E0033E306 /* MapKitViewController.m */; };
+		BF73CA721A459DBD0033E306 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF73CA711A459DBD0033E306 /* MapKit.framework */; };
+		BF73CA741A45A2570033E306 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF73CA731A45A2570033E306 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,10 @@
 		BF6294DC1A04A0E200DB06CD /* HalloweenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HalloweenTests.m; sourceTree = "<group>"; };
 		BF6294E61A04C0C300DB06CD /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
 		BF6294E71A04C0C300DB06CD /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
+		BF73CA6E1A459A4E0033E306 /* MapKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapKitViewController.h; sourceTree = "<group>"; };
+		BF73CA6F1A459A4E0033E306 /* MapKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapKitViewController.m; sourceTree = "<group>"; };
+		BF73CA711A459DBD0033E306 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BF73CA731A45A2570033E306 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF73CA741A45A2570033E306 /* CoreLocation.framework in Frameworks */,
+				BF73CA721A459DBD0033E306 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +107,8 @@
 		BF6294B41A04A0E100DB06CD = {
 			isa = PBXGroup;
 			children = (
+				BF73CA731A45A2570033E306 /* CoreLocation.framework */,
+				BF73CA711A459DBD0033E306 /* MapKit.framework */,
 				BF6294BF1A04A0E100DB06CD /* Halloween */,
 				BF6294D91A04A0E200DB06CD /* HalloweenTests */,
 				BF6294BE1A04A0E100DB06CD /* Products */,
@@ -146,6 +157,8 @@
 				BF55493D1A21FF1200B78159 /* CommunicationHandler.m */,
 				BF55493F1A2206C600B78159 /* NewsFeedTableViewController.h */,
 				BF5549401A2206C600B78159 /* NewsFeedTableViewController.m */,
+				BF73CA6E1A459A4E0033E306 /* MapKitViewController.h */,
+				BF73CA6F1A459A4E0033E306 /* MapKitViewController.m */,
 			);
 			path = Halloween;
 			sourceTree = "<group>";
@@ -284,6 +297,7 @@
 				BF6294C91A04A0E200DB06CD /* ViewController.m in Sources */,
 				BF6294E81A04C0C300DB06CD /* BrowserViewController.m in Sources */,
 				BF596DC91A2097B80080BDB1 /* ReceipeTableViewController.m in Sources */,
+				BF73CA701A459A4E0033E306 /* MapKitViewController.m in Sources */,
 				BF5549411A2206C600B78159 /* NewsFeedTableViewController.m in Sources */,
 				BF5BBD031A18DB2C002E1915 /* TermConditionViewController.m in Sources */,
 				BF5BBCFD1A18BA19002E1915 /* FirstTableViewController.m in Sources */,

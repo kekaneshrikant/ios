@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Xh-ov-bbq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Xh-ov-bbq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -301,6 +301,39 @@
             </objects>
             <point key="canvasLocation" x="-887" y="1669"/>
         </scene>
+        <!--MapKit-->
+        <scene sceneID="swn-5Z-brj">
+            <objects>
+                <viewController id="cQs-mr-Td2" customClass="MapKitViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0sx-CA-6uP"/>
+                        <viewControllerLayoutGuide type="bottom" id="oJ4-Le-mJQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ibr-aa-a15">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FGn-L2-5Ym">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FGn-L2-5Ym" firstAttribute="top" secondItem="0sx-CA-6uP" secondAttribute="bottom" id="1Dk-2t-frS"/>
+                            <constraint firstItem="FGn-L2-5Ym" firstAttribute="bottom" secondItem="Ibr-aa-a15" secondAttribute="bottomMargin" id="hbJ-26-IPM"/>
+                            <constraint firstItem="FGn-L2-5Ym" firstAttribute="leading" secondItem="Ibr-aa-a15" secondAttribute="leadingMargin" constant="-16" id="sk0-JB-a69"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FGn-L2-5Ym" secondAttribute="trailing" constant="-16" id="tBb-sY-WTt"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MapKit" id="722-Q0-Zlu"/>
+                    <connections>
+                        <outlet property="mapView" destination="FGn-L2-5Ym" id="utw-qh-GIf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdE-ge-o9M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1493" y="37"/>
+        </scene>
         <!--News Feed-->
         <scene sceneID="eSR-LK-8qz">
             <objects>
@@ -495,11 +528,12 @@
                         <segue destination="B95-MP-TZu" kind="relationship" relationship="viewControllers" id="HTk-Vf-LVW"/>
                         <segue destination="ba9-Ay-5iY" kind="relationship" relationship="viewControllers" id="fel-9A-YEj"/>
                         <segue destination="15g-be-rPO" kind="relationship" relationship="viewControllers" id="ylb-17-iz7"/>
+                        <segue destination="cQs-mr-Td2" kind="relationship" relationship="viewControllers" id="CbY-UW-ZDW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XtV-m3-OjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="339"/>
+            <point key="canvasLocation" x="187" y="19"/>
         </scene>
         <!--TableBasics-->
         <scene sceneID="ss1-0t-ord">

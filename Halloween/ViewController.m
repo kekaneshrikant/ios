@@ -72,6 +72,14 @@
     
     counter = 0;
     
+    
+    [UIView animateWithDuration:10 delay:2 options:UIViewAnimationOptionCurveLinear animations:^{
+        self.mySecondLabel.alpha = 0;
+    } completion:^(BOOL finished) {
+        NSLog(@"Animation Status : %d",finished);
+    }];
+    
+    
 }
 
 

@@ -56,14 +56,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HkY-xe-joQ">
+                                <rect key="frame" x="256" y="20" width="328" height="259"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HkY-xe-joQ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="MnM-4B-LPD"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="HkY-xe-joQ" secondAttribute="bottom" constant="272" id="Xyh-88-Noo"/>
+                            <constraint firstItem="HkY-xe-joQ" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="aiP-GB-Phr"/>
+                            <constraint firstItem="HkY-xe-joQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="240" id="sDs-DJ-aSD"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="UI Basics" id="3Sd-Nv-ZFx"/>
                     <connections>
                         <outlet property="firstButton" destination="PCI-fK-wUS" id="Ib1-tt-oDP"/>
                         <outlet property="firstSlider" destination="yKG-Mi-r3E" id="dcU-Og-VVz"/>
                         <outlet property="firstSliderLabel" destination="Bhj-eI-62v" id="E2b-Sa-DFq"/>
+                        <outlet property="imageView" destination="HkY-xe-joQ" id="LOH-OZ-hKe"/>
                         <outlet property="myFirstLabel" destination="8cY-EF-L9Q" id="Sde-Ng-bVB"/>
                         <outlet property="secondSliderLabel" destination="rFy-Xa-WpR" id="tpM-B2-TRk"/>
                     </connections>

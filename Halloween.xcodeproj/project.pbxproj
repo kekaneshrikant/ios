@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF4BC2F11A46D9A1008A9DB5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4BC2F01A46D9A1008A9DB5 /* AVFoundation.framework */; };
+		BF4BC2F31A46DEB0008A9DB5 /* mySong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF4BC2F21A46DEB0008A9DB5 /* mySong.mp3 */; };
 		BF55493B1A21FB0800B78159 /* makhani.png in Resources */ = {isa = PBXBuildFile; fileRef = BF55493A1A21FB0800B78159 /* makhani.png */; };
 		BF55493E1A21FF1200B78159 /* CommunicationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BF55493D1A21FF1200B78159 /* CommunicationHandler.m */; };
 		BF5549411A2206C600B78159 /* NewsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5549401A2206C600B78159 /* NewsFeedTableViewController.m */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF4BC2F01A46D9A1008A9DB5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BF4BC2F21A46DEB0008A9DB5 /* mySong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mySong.mp3; sourceTree = "<group>"; };
 		BF55493A1A21FB0800B78159 /* makhani.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = makhani.png; sourceTree = "<group>"; };
 		BF55493C1A21FF1200B78159 /* CommunicationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunicationHandler.h; sourceTree = "<group>"; };
 		BF55493D1A21FF1200B78159 /* CommunicationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunicationHandler.m; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4BC2F11A46D9A1008A9DB5 /* AVFoundation.framework in Frameworks */,
 				BF73CA741A45A2570033E306 /* CoreLocation.framework in Frameworks */,
 				BF73CA721A459DBD0033E306 /* MapKit.framework in Frameworks */,
 			);
@@ -107,6 +112,7 @@
 		BF6294B41A04A0E100DB06CD = {
 			isa = PBXGroup;
 			children = (
+				BF4BC2F01A46D9A1008A9DB5 /* AVFoundation.framework */,
 				BF73CA731A45A2570033E306 /* CoreLocation.framework */,
 				BF73CA711A459DBD0033E306 /* MapKit.framework */,
 				BF6294BF1A04A0E100DB06CD /* Halloween */,
@@ -127,6 +133,7 @@
 		BF6294BF1A04A0E100DB06CD /* Halloween */ = {
 			isa = PBXGroup;
 			children = (
+				BF4BC2F21A46DEB0008A9DB5 /* mySong.mp3 */,
 				BF55493A1A21FB0800B78159 /* makhani.png */,
 				BF596DCE1A20A5A60080BDB1 /* butterChicken.png */,
 				BF596DCC1A20A54B0080BDB1 /* bhindiAaloo.png */,
@@ -276,6 +283,7 @@
 				BF6294D11A04A0E200DB06CD /* LaunchScreen.xib in Resources */,
 				BF55493B1A21FB0800B78159 /* makhani.png in Resources */,
 				BF6294CE1A04A0E200DB06CD /* Images.xcassets in Resources */,
+				BF4BC2F31A46DEB0008A9DB5 /* mySong.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

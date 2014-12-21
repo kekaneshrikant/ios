@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController : UIViewController <UIAlertViewDelegate>
 
@@ -33,6 +34,10 @@
 - (IBAction)buttonClicked:(UIButton *)sender;
 
 - (IBAction)myFirstSwitchTriggered:(UISwitch *)sender;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+
 
 @end
 

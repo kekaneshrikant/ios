@@ -24,14 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
-    
     self.imageView.image = [UIImage imageNamed:self.receipeDictionary[@"imageName"]];
     self.nameLabel.text = self.receipeDictionary[@"name"];
     self.ingredientsLabel.text = self.receipeDictionary[@"ingredients"];
     self.procedureLabel.text = self.receipeDictionary[@"procedure"];
    
+    
     NSLog(@"The dictionary is %@",self.receipeDictionary);
 }
 

@@ -7,10 +7,11 @@
 //
 
 #import "ViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface ViewController ()
+@interface ViewController () <AVAudioPlayerDelegate>
 
-
+@property(nonatomic,strong) AVAudioPlayer *audioPlayer;
 
 @end
 
@@ -72,12 +73,13 @@
     
     counter = 0;
     
+    /*
     
-    [UIView animateWithDuration:10 delay:2 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:10 delay:2 options:UIViewAnimationOptionCurveEaseOut animations:^{
         self.mySecondLabel.alpha = 0;
     } completion:^(BOOL finished) {
         NSLog(@"Animation Status : %d",finished);
-    }];
+    }]; */
     
     
 }
@@ -135,6 +137,12 @@
     
 }
 
+
+
+
+
+
+
 //First Switch value Changed event prepared through Storyboard
 - (IBAction)myFirstSwitchTriggered:(UISwitch *)sender {
     
@@ -153,10 +161,62 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     if([alertView.title isEqualToString:@"Button Clicked!"]){
         if ([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Okay"]) {
+            
+            
+            [self.audioPlayer pause];
+            
+            
+            
+            
+            
             NSLog(@"Second Button clicked, %@ button clicked",[alertView buttonTitleAtIndex:buttonIndex]);
         } else if ([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Retry"]) {
+            
             NSLog(@"Second Button clicked, %@ button clicked",[alertView buttonTitleAtIndex:buttonIndex]);
+            
+            
+            if (self.audioPlayer) {
+                [self.audioPlayer play];
+            }else{
+                dispatch_queue_t dispatch_queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+                
+                dispatch_async(dispatch_queue, ^ (void){
+                    NSBundle *mainBundle = [NSBundle mainBundle];
+                    NSString *filePath = [mainBundle pathForResource:@"mySong" ofType:@"mp3"];
+                    
+                    NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+                    
+                    NSError *error = nil;
+                    
+                    self.audioPlayer = [[AVAudioPlayer alloc] initWithData:fileData error:&error];
+                    
+                    
+                    if (self.audioPlayer !=nil) {
+                        self.audioPlayer.delegate = self;
+                        if ([self.audioPlayer prepareToPlay] && [self.audioPlayer play]) {
+                            // Successfully started playing...
+                            NSLog(@"Started Playing te Audio file");
+                            
+                        }else{
+                            // Failed to Play
+                            NSLog(@"Failed to play the Audio");
+                        }
+                    }else{
+                        // Failed to instantiate the AVAudioPlayer
+                        NSLog(@"Failed to instantiate the AVAudioPlayer");
+                    }
+                });
+                
+            }
+            
+            
+            
+          
+            
+            
         } else if ([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Cancel"]) {
+            [self.audioPlayer stop];
+            self.audioPlayer = nil;
             NSLog(@"Second Button clicked, %@ button clicked",[alertView buttonTitleAtIndex:buttonIndex]);
         }
     }

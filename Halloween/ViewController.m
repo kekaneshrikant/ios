@@ -164,11 +164,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
             
             
             [self.audioPlayer pause];
-            
-            
-            
-            
-            
+           
             NSLog(@"Second Button clicked, %@ button clicked",[alertView buttonTitleAtIndex:buttonIndex]);
         } else if ([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Retry"]) {
             
@@ -178,7 +174,8 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
             if (self.audioPlayer) {
                 [self.audioPlayer play];
             }else{
-                dispatch_queue_t dispatch_queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+                
+           	     dispatch_queue_t dispatch_queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
                 
                 dispatch_async(dispatch_queue, ^ (void){
                     NSBundle *mainBundle = [NSBundle mainBundle];
@@ -206,13 +203,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
                         NSLog(@"Failed to instantiate the AVAudioPlayer");
                     }
                 });
-                
             }
-            
-            
-            
-          
-            
             
         } else if ([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Cancel"]) {
             [self.audioPlayer stop];

@@ -47,6 +47,7 @@
 /* Begin PBXFileReference section */
 		BF4BC2F01A46D9A1008A9DB5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BF4BC2F21A46DEB0008A9DB5 /* mySong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mySong.mp3; sourceTree = "<group>"; };
+		BF4BC2F41A46F218008A9DB5 /* SwiftPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftPlayground.playground; sourceTree = "<group>"; };
 		BF55493A1A21FB0800B78159 /* makhani.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = makhani.png; sourceTree = "<group>"; };
 		BF55493C1A21FF1200B78159 /* CommunicationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunicationHandler.h; sourceTree = "<group>"; };
 		BF55493D1A21FF1200B78159 /* CommunicationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunicationHandler.m; sourceTree = "<group>"; };
@@ -166,6 +167,7 @@
 				BF5549401A2206C600B78159 /* NewsFeedTableViewController.m */,
 				BF73CA6E1A459A4E0033E306 /* MapKitViewController.h */,
 				BF73CA6F1A459A4E0033E306 /* MapKitViewController.m */,
+				BF4BC2F41A46F218008A9DB5 /* SwiftPlayground.playground */,
 			);
 			path = Halloween;
 			sourceTree = "<group>";
